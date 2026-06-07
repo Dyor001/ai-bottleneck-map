@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Bottleneck Map</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --paper: #fffaf2;
+      --ink: #1f1b16;
+      --muted: #5e564c;
+      --line: #d8c9b3;
+      --accent: #9f3d23;
+      --accent-2: #284f46;
+      --shadow: 0 16px 50px rgba(31, 27, 22, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(159, 61, 35, 0.14), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(40, 79, 70, 0.14), transparent 28%),
+        linear-gradient(180deg, #f7f1e7 0%, var(--bg) 100%);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+
+    .card {
+      background: rgba(255, 250, 242, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(216, 201, 179, 0.88);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy {
+      padding: 40px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--accent-2);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 0.95;
+      margin: 0 0 18px;
+      font-weight: 700;
+    }
+
+    .lede {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 58ch;
+      margin: 0 0 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      border: 1px solid transparent;
+      transition: transform 160ms ease, background 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff9f4;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .hero-panel {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .chain {
+      display: grid;
+      gap: 12px;
+    }
+
+    .chain div {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.52);
+      font-size: 0.98rem;
+    }
+
+    .chain .hot {
+      border-color: rgba(159, 61, 35, 0.35);
+      background: rgba(159, 61, 35, 0.08);
+    }
+
+    .section {
+      margin-top: 26px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .feature, .example, .schema {
+      padding: 26px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .wide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    pre {
+      margin: 16px 0 0;
+      padding: 18px;
+      border-radius: 20px;
+      background: #201c17;
+      color: #f6efe5;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .footer small {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .grid,
+      .wide {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-panel,
+      .feature,
+      .example,
+      .schema,
+      .footer {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="card hero-copy">
+        <div class="eyebrow">Agent Skill for research systems</div>
+        <h1>AI Bottleneck Map</h1>
+        <p class="lede">
+          A standalone skill for turning AI, semiconductor, and infrastructure narratives into bottleneck layers,
+          company node cards, re-rating paths, and falsification rules. Built for people who want a sharper map than
+          a hot-stock list.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="./SKILL.md">Read the skill</a>
+          <a class="button secondary" href="./README.md">Read the overview</a>
+          <a class="button secondary" href="./examples/cpo-scan-example.md">See examples</a>
+        </div>
+      </div>
+      <div class="card hero-panel">
+        <div>
+          <div class="panel-title">Research path</div>
+          <div class="chain">
+            <div>Theme expansion</div>
+            <div>System change</div>
+            <div class="hot">Scarce bottleneck layer</div>
+            <div>Public-market mapping</div>
+            <div>Timing and triggers</div>
+            <div>Kill conditions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid">
+      <article class="card feature">
+        <h3>What it does</h3>
+        <p>
+          It takes broad themes like CPO, HBM, cooling, power, or robotics and forces them down into constrained,
+          hard-to-scale layers before ranking listed companies.
+        </p>
+      </article>
+      <article class="card feature">
+        <h3>What it avoids</h3>
+        <p>
+          It does not confuse an interesting clue with an investable mapping. The skill keeps evidence, timing, and
+          falsification explicit instead of hiding behind theme momentum.
+        </p>
+      </article>
+      <article class="card feature">
+        <h3>What it outputs</h3>
+        <p>
+          Bottleneck maps, node cards, re-rating triggers, stage labels, and kill conditions that can feed a real
+          industry-chain knowledge base.
+        </p>
+      </article>
+    </section>
+
+    <section class="section wide">
+      <article class="card example">
+        <h2>Example prompt</h2>
+        <p>Use the skill when you want the chain logic before the ticker list.</p>
+        <pre>Use ai-bottleneck-map to break down CPO into bottleneck layers first,
+then rank the cleanest listed company mappings with evidence, timing,
+re-rating triggers, analogs, and kill conditions.</pre>
+      </article>
+      <article class="card schema">
+        <h2>Node card shape</h2>
+        <p>Structured output is the default when you are building a knowledge base.</p>
+        <pre>Theme
+Bottleneck layer
+Company
+Role
+Chain position
+Mapping strength
+Stage
+Time window
+Re-rating triggers
+Evidence
+Kill conditions
+Analog
+Open questions</pre>
+      </article>
+    </section>
+
+    <section class="section grid">
+      <article class="card feature">
+        <h3>Good for</h3>
+        <ul>
+          <li>Theme scans</li>
+          <li>Single-company challenge work</li>
+          <li>Node-card generation</li>
+          <li>AI supply-chain knowledge bases</li>
+        </ul>
+      </article>
+      <article class="card feature">
+        <h3>Research standards</h3>
+        <ul>
+          <li>Prefer filings, earnings calls, exchange documents, and project approvals</li>
+          <li>Treat social posts as leads, not proof</li>
+          <li>Separate chain truth from market mapping quality</li>
+        </ul>
+      </article>
+      <article class="card feature">
+        <h3>Why it is sharper</h3>
+        <ul>
+          <li>Ranks layers before companies</li>
+          <li>Separates research value from investability</li>
+          <li>Forces every idea to carry a downgrade path</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="card footer">
+      <small>
+        This project is research support only. It is meant to make industry-chain work more structured,
+        more reusable, and more falsifiable.
+      </small>
+      <a class="button primary" href="./references/workflow.md">Open workflow</a>
+    </footer>
+  </div>
+</body>
+</html>
