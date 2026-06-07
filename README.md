@@ -1,17 +1,26 @@
+<div align="center">
+
 # AI Bottleneck Map
 
-`ai-bottleneck-map` is an Agent Skill for turning broad AI narratives into bottleneck maps, company node cards, and re-rating paths.
+### A research skill for turning AI narratives into bottleneck layers, node cards, and re-rating maps
 
-This project is built for people who do not want another generic AI stock screener. The goal is narrower and sharper:
+[Project Page](./index.html) · [Skill Spec](./SKILL.md) · [Examples](./examples/cpo-scan-example.md) · [Contact](https://x.com/Dyorzheng)
 
-`start from a technology expansion path -> find the hard-to-scale layer -> map the cleanest listed companies -> define timing, triggers, and kill conditions`
+</div>
 
-Instead of asking "which stock is hot", this skill asks:
+`ai-bottleneck-map` is an Agent Skill for people who want sharper AI industry-chain research than a generic stock screener or a loose collection of theme notes.
+
+The core workflow is:
+
+`theme -> system change -> scarce layer -> public-company mapping -> timing -> trigger -> kill conditions`
+
+Instead of asking only "which stock is hot", this project asks:
 
 - Which layer gets tight first?
-- Which company maps cleanly to that layer?
-- What proof makes the mapping credible?
-- What would make the thesis weaker or wrong?
+- Which listed company maps cleanly to that layer?
+- What evidence makes the mapping credible?
+- What event could force re-rating?
+- What condition would weaken or kill the thesis?
 
 ## Why this exists
 
@@ -27,7 +36,7 @@ This repository packages a more useful workflow for:
 - robotics
 - defense-electronics-adjacent supply chains
 
-It does not imitate any public investor's tone or persona. It only absorbs the transferable part of the method: bottleneck-first research.
+It does not imitate any public investor's tone or persona. It only absorbs the transferable part of the method: bottleneck-first research with explicit timing and falsification.
 
 ## What the skill produces
 
@@ -47,6 +56,14 @@ That makes it useful for:
 - AI industry knowledge bases
 - node-card generation
 - re-rating map building
+
+## Project principles
+
+- Rank layers before companies.
+- Separate research value from investability.
+- Prefer public evidence over theme intuition.
+- Treat social content as lead generation, not proof.
+- Force every good idea to carry a downgrade path.
 
 ## Repository layout
 
@@ -79,6 +96,14 @@ ai-bottleneck-map/
 - Emphasis on timing windows, re-rating triggers, and falsification.
 - A clean landing page you can show publicly.
 
+## Showcase files
+
+- `index.html`: polished project landing page for local viewing or GitHub Pages
+- `README.md`: public repository overview
+- `SKILL.md`: the actual skill trigger and behavior contract
+- `examples/`: small examples for scans and node-card output
+- `references/`: the deeper workflow, schema, and source-check guidance
+
 ## Quick prompts
 
 ```text
@@ -96,6 +121,12 @@ Use ai-bottleneck-map in knowledge-base mode and output structured node cards fo
 ## Public page
 
 Open `index.html` to view the standalone project page locally. It is intended to be suitable for GitHub Pages or for simple repository showcase use.
+
+## Contact
+
+If you want to discuss the method, suggest improvements, or follow the project, reach out here:
+
+- X: [@Dyorzheng](https://x.com/Dyorzheng)
 
 ## Scope
 

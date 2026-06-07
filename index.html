@@ -89,6 +89,22 @@
       gap: 12px;
     }
 
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 26px;
+    }
+
+    .meta-chip {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      background: rgba(255,255,255,0.5);
+    }
+
     .button {
       display: inline-flex;
       align-items: center;
@@ -114,6 +130,12 @@
       background: transparent;
       border-color: var(--line);
       color: var(--ink);
+    }
+
+    .button.ghost {
+      background: rgba(255,255,255,0.58);
+      border-color: var(--line);
+      color: var(--accent-2);
     }
 
     .hero-panel {
@@ -193,6 +215,12 @@
       gap: 20px;
     }
 
+    .contact {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+    }
+
     pre {
       margin: 16px 0 0;
       padding: 18px;
@@ -231,8 +259,13 @@
       .feature,
       .example,
       .schema,
+      .contact .card,
       .footer {
         padding: 24px;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -248,10 +281,16 @@
           company node cards, re-rating paths, and falsification rules. Built for people who want a sharper map than
           a hot-stock list.
         </p>
+        <div class="meta-row">
+          <div class="meta-chip">Bottleneck-first research</div>
+          <div class="meta-chip">Node-card ready</div>
+          <div class="meta-chip">Public-evidence oriented</div>
+        </div>
         <div class="cta-row">
           <a class="button primary" href="./SKILL.md">Read the skill</a>
           <a class="button secondary" href="./README.md">Read the overview</a>
           <a class="button secondary" href="./examples/cpo-scan-example.md">See examples</a>
+          <a class="button ghost" href="https://x.com/Dyorzheng">Contact on X</a>
         </div>
       </div>
       <div class="card hero-panel">
@@ -345,6 +384,31 @@ Open questions</pre>
           <li>Separates research value from investability</li>
           <li>Forces every idea to carry a downgrade path</li>
         </ul>
+      </article>
+    </section>
+
+    <section class="section contact">
+      <article class="card feature">
+        <h2>Built for real research workflows</h2>
+        <p>
+          This repository is meant to be both usable and presentable. It includes the skill itself, deeper reference
+          notes, prompt starters, example outputs, and a landing page that can work as a project front door.
+        </p>
+        <ul>
+          <li>Useful as a standalone Agent Skill</li>
+          <li>Useful as a seed for an AI supply-chain knowledge base</li>
+          <li>Useful as a public-facing research-method project</li>
+        </ul>
+      </article>
+      <article class="card feature">
+        <h2>Contact</h2>
+        <p>
+          If you want to discuss the framework, follow updates, or reach out about AI supply-chain research, use the
+          contact link below.
+        </p>
+        <div class="cta-row" style="margin-top:18px;">
+          <a class="button primary" href="https://x.com/Dyorzheng">X / @Dyorzheng</a>
+        </div>
       </article>
     </section>
 
