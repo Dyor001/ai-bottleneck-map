@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Bottleneck Map</title>
+  <title>AI Bottleneck Map | AI 产业链瓶颈地图</title>
   <style>
     :root {
       --bg: #f4efe7;
@@ -23,7 +23,7 @@
         radial-gradient(circle at top left, rgba(159, 61, 35, 0.14), transparent 30%),
         radial-gradient(circle at 80% 20%, rgba(40, 79, 70, 0.14), transparent 28%),
         linear-gradient(180deg, #f7f1e7 0%, var(--bg) 100%);
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
     }
     .shell { max-width: 1180px; margin: 0 auto; padding: 32px 20px 80px; }
     .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: stretch; margin-bottom: 28px; }
@@ -47,7 +47,7 @@
       margin-bottom: 22px;
     }
     h1 { font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 0.95; margin: 0 0 18px; font-weight: 700; }
-    .lede { font-size: 1.15rem; line-height: 1.7; color: var(--muted); max-width: 58ch; margin: 0 0 28px; }
+    .lede { font-size: 1.15rem; line-height: 1.8; color: var(--muted); max-width: 58ch; margin: 0 0 28px; }
     .cta-row, .meta-row { display: flex; flex-wrap: wrap; gap: 12px; }
     .meta-row { margin: 0 0 26px; }
     .meta-chip {
@@ -89,8 +89,8 @@
     .feature, .example, .schema { padding: 26px; }
     h2 { font-size: 2rem; margin: 0 0 14px; }
     h3 { font-size: 1.2rem; margin: 0 0 12px; }
-    p { color: var(--muted); line-height: 1.7; margin: 0; }
-    ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
+    p { color: var(--muted); line-height: 1.8; margin: 0; }
+    ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); line-height: 1.8; }
     .wide { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .contact { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; }
     pre {
@@ -101,7 +101,7 @@
       color: #f6efe5;
       overflow-x: auto;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
       border: 1px solid rgba(255,255,255,0.08);
     }
     .footer {
@@ -112,7 +112,7 @@
       gap: 20px;
       align-items: center;
     }
-    .footer small { color: var(--muted); line-height: 1.6; }
+    .footer small { color: var(--muted); line-height: 1.8; }
     @media (max-width: 980px) {
       .hero, .grid, .wide { grid-template-columns: 1fr; }
       .hero-copy, .hero-panel, .feature, .example, .schema, .contact .card, .footer { padding: 24px; }
@@ -124,36 +124,35 @@
   <div class="shell">
     <section class="hero">
       <div class="card hero-copy">
-        <div class="eyebrow">Agent Skill for research systems</div>
+        <div class="eyebrow">AI 产业链研究技能</div>
         <h1>AI Bottleneck Map</h1>
         <p class="lede">
-          A standalone skill for turning AI, semiconductor, and infrastructure narratives into bottleneck layers,
-          company node cards, re-rating paths, and falsification rules. Built for people who want a sharper map than
-          a hot-stock list.
+          一个把 AI、半导体与基础设施叙事继续下钻成瓶颈层、节点卡、重估路径和证伪条件的独立 skill，
+          适合那些不满足于热门股票名单，而想真正做产业链地图的人。
         </p>
         <div class="meta-row">
-          <div class="meta-chip">Bottleneck-first research</div>
-          <div class="meta-chip">Node-card ready</div>
-          <div class="meta-chip">Public-evidence oriented</div>
+          <div class="meta-chip">瓶颈优先研究</div>
+          <div class="meta-chip">节点卡友好</div>
+          <div class="meta-chip">公共证据导向</div>
         </div>
         <div class="cta-row">
-          <a class="button primary" href="./SKILL.md">Read the skill</a>
-          <a class="button secondary" href="./README.md">Overview</a>
-          <a class="button secondary" href="./examples/cpo-scan-example.md">Examples</a>
-          <a class="button ghost" href="./index.zh-CN.html">中文页</a>
-          <a class="button ghost" href="https://x.com/Dyorzheng">Contact on X</a>
+          <a class="button primary" href="./SKILL.md">查看技能</a>
+          <a class="button secondary" href="./README.zh-CN.md">项目说明</a>
+          <a class="button secondary" href="./examples/cpo-scan-example.md">示例</a>
+          <a class="button ghost" href="./index.html">English</a>
+          <a class="button ghost" href="https://x.com/Dyorzheng">联系我</a>
         </div>
       </div>
       <div class="card hero-panel">
         <div>
-          <div class="panel-title">Research path</div>
+          <div class="panel-title">研究路径</div>
           <div class="chain">
-            <div>Theme expansion</div>
-            <div>System change</div>
-            <div class="hot">Scarce bottleneck layer</div>
-            <div>Public-market mapping</div>
-            <div>Timing and triggers</div>
-            <div>Kill conditions</div>
+            <div>主题扩张</div>
+            <div>系统变化</div>
+            <div class="hot">稀缺瓶颈层</div>
+            <div>上市公司映射</div>
+            <div>时间与触发</div>
+            <div>杀逻辑条件</div>
           </div>
         </div>
       </div>
@@ -161,101 +160,96 @@
 
     <section class="section grid">
       <article class="card feature">
-        <h3>What it does</h3>
+        <h3>它做什么</h3>
         <p>
-          It takes broad themes like CPO, HBM, cooling, power, or robotics and forces them down into constrained,
-          hard-to-scale layers before ranking listed companies.
+          它会把 CPO、HBM、冷却、电力、机器人这类宽泛主题继续拆到约束层，再去排序真正映射干净的上市公司。
         </p>
       </article>
       <article class="card feature">
-        <h3>What it avoids</h3>
+        <h3>它避免什么</h3>
         <p>
-          It does not confuse an interesting clue with an investable mapping. The skill keeps evidence, timing, and
-          falsification explicit instead of hiding behind theme momentum.
+          它不会把“有趣线索”直接等同于“可下注映射”。证据、时间和证伪路径都会被单独写清楚。
         </p>
       </article>
       <article class="card feature">
-        <h3>What it outputs</h3>
+        <h3>它输出什么</h3>
         <p>
-          Bottleneck maps, node cards, re-rating triggers, stage labels, and kill conditions that can feed a real
-          industry-chain knowledge base.
+          瓶颈地图、节点卡、阶段标签、重估触发和杀逻辑条件，这些都可以直接喂给真正的产业链知识库。
         </p>
       </article>
     </section>
 
     <section class="section wide">
       <article class="card example">
-        <h2>Example prompt</h2>
-        <p>Use the skill when you want the chain logic before the ticker list.</p>
-        <pre>Use ai-bottleneck-map to break down CPO into bottleneck layers first,
-then rank the cleanest listed company mappings with evidence, timing,
-re-rating triggers, analogs, and kill conditions.</pre>
+        <h2>示例提示词</h2>
+        <p>当你需要先看产业链逻辑、再看公司时，就用这个 skill。</p>
+        <pre>用 ai-bottleneck-map 先拆 CPO 的瓶颈层，
+再排序映射最干净的上市公司，
+并输出证据、时间窗口、重估触发和杀逻辑条件。</pre>
       </article>
       <article class="card schema">
-        <h2>Node card shape</h2>
-        <p>Structured output is the default when you are building a knowledge base.</p>
-        <pre>Theme
-Bottleneck layer
-Company
-Role
-Chain position
-Mapping strength
-Stage
-Time window
-Re-rating triggers
-Evidence
-Kill conditions
-Analog
-Open questions</pre>
+        <h2>节点卡结构</h2>
+        <p>做知识库时，默认优先结构化输出。</p>
+        <pre>主题
+瓶颈层
+公司
+角色
+产业链位置
+映射强度
+阶段
+时间窗口
+重估触发
+证据
+杀逻辑条件
+类比对象
+待验证问题</pre>
       </article>
     </section>
 
     <section class="section grid">
       <article class="card feature">
-        <h3>Good for</h3>
+        <h3>适合场景</h3>
         <ul>
-          <li>Theme scans</li>
-          <li>Single-company challenge work</li>
-          <li>Node-card generation</li>
-          <li>AI supply-chain knowledge bases</li>
+          <li>主题扫描</li>
+          <li>单公司挑战</li>
+          <li>节点卡生成</li>
+          <li>AI 产业链知识库</li>
         </ul>
       </article>
       <article class="card feature">
-        <h3>Research standards</h3>
+        <h3>研究标准</h3>
         <ul>
-          <li>Prefer filings, earnings calls, exchange documents, and project approvals</li>
-          <li>Treat social posts as leads, not proof</li>
-          <li>Separate chain truth from market mapping quality</li>
+          <li>优先看公告、财报、电话会、交易所文件、项目审批</li>
+          <li>社交内容只当线索，不当证明</li>
+          <li>明确区分链条真实性和上市公司映射质量</li>
         </ul>
       </article>
       <article class="card feature">
-        <h3>Why it is sharper</h3>
+        <h3>为什么更锋利</h3>
         <ul>
-          <li>Ranks layers before companies</li>
-          <li>Separates research value from investability</li>
-          <li>Forces every idea to carry a downgrade path</li>
+          <li>先排层，再排公司</li>
+          <li>区分研究价值与可下注性</li>
+          <li>每个判断都必须带降级路径</li>
         </ul>
       </article>
     </section>
 
     <section class="section contact">
       <article class="card feature">
-        <h2>Built for real research workflows</h2>
+        <h2>为真实研究流程而做</h2>
         <p>
-          This repository is meant to be both usable and presentable. It includes the skill itself, deeper reference
-          notes, prompt starters, example outputs, and a landing page that can work as a project front door.
+          这个仓库既要能用，也要能展示。里面既有 skill 本体，也有参考资料、提示词、示例输出和一页能拿出来展示的项目门面。
         </p>
         <ul>
-          <li>Useful as a standalone Agent Skill</li>
-          <li>Useful as a seed for an AI supply-chain knowledge base</li>
-          <li>Useful as a public-facing research-method project</li>
+          <li>可独立使用的 Agent Skill</li>
+          <li>可作为 AI 产业链知识库的种子</li>
+          <li>可作为公开方法论项目对外展示</li>
         </ul>
       </article>
       <article class="card feature">
-        <h2>Contact</h2>
+        <h2>联系方式</h2>
         <p>
-          If you want to discuss the framework, follow updates, or reach out about AI supply-chain research, use the
-          contact link below.
+          如果你想讨论这套框架、跟踪更新，或者聊 AI 产业链研究，可以通过下面这个链接联系。
         </p>
         <div class="cta-row" style="margin-top:18px;">
           <a class="button primary" href="https://x.com/Dyorzheng">X / @Dyorzheng</a>
@@ -265,10 +259,9 @@ Open questions</pre>
 
     <footer class="card footer">
       <small>
-        This project is research support only. It is meant to make industry-chain work more structured,
-        more reusable, and more falsifiable.
+        本项目只提供研究支持，目标是让产业链研究更结构化、更可复用，也更容易被证伪。
       </small>
-      <a class="button primary" href="./references/workflow.md">Open workflow</a>
+      <a class="button primary" href="./references/workflow.md">查看流程</a>
     </footer>
   </div>
 </body>
